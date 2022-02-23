@@ -137,9 +137,10 @@ main {
 }
 
 .avatar_img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 4px;
+  margin: 2.2rem 0;
 }
 
 .avatar_img:hover {
