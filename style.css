@@ -16,6 +16,7 @@
 }
 
 body {
+  height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   background: var(--white);
@@ -25,12 +26,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-image: linear-gradient(
-    to bottom,
-    var(--white),
-    var(--darkest-grey)
-  );
-  background-size: cover;
 }
 
 header {
@@ -46,18 +41,18 @@ header {
 }
 
 header h1 {
-    font-size: 2.3rem;
-    font-weight: 900;
-    margin: 1rem 0;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin: 1rem 0;
 }
 
 header h1 span {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .search-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .query {
