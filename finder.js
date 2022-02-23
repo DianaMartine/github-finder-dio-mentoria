@@ -1,4 +1,13 @@
-const user = {};
+const user = {
+  login: String,
+  name: String,
+  bio: String,
+  avatar_url: String,
+  public_repos: Number,
+  followers: Number,
+  following: Number,
+  repos: Array,
+};
 const query = document.querySelector(".query");
 
 async function getUser() {
@@ -19,7 +28,6 @@ async function getUser() {
   user.public_repos = userData.public_repos;
   user.followers = userData.followers;
   user.following = userData.following;
-  console.log(user);
 
   getAllData();
 }
@@ -38,7 +46,7 @@ function getAllData() {
   userInfo.innerHTML = `
     <div class="user-info">
       <div class="user-avatar">
-          <h2 class="user-name">${user.name}</h2>
+          <h2 class="user-name">${user.name == null ? user.name = "No username" : user.name}</h2>
           <h3 class="user-login">${user.login}</h3>
           <img class="avatar_img" src="${user.avatar_url}" alt="${user.login}">
           <p class="bio">${
@@ -61,7 +69,7 @@ function getAllData() {
           ? (repo.description = "No description")
           : repo.description
       }</p>
-      <p class="repo-language">${repo.language}</p>
+      <p class="repo-language">${repo.language == null ? repo.language = "No language found" : repo.language}</p>
       <div class="repo-stats">
         <span>
           ⭐${repo.stargazers_count}
@@ -73,7 +81,7 @@ function getAllData() {
           📦${repo.forks_count}
         </span>
         <span>
-          📅${repo.updated_at}
+          📅${new Date(repo.updated_at).toLocaleDateString('pt-br')}
         </span>
       </div>
       <a href="${repo.html_url}" target="_blank">
