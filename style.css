@@ -160,14 +160,6 @@ main {
   justify-content: flex-start;
 }
 
-#repos {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  height: 100%;
-  margin: auto;
-}
-
 .repo {
   border: solid 1px var(--dark-grey);
   border-radius: 4px;
